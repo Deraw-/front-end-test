@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		>
+
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0"
+		>
+
+		<link
+			rel="shortcut icon"
+			href="<%= BASE_URL %>favicon.ico"
+		>
+
+		<meta
+			name="apple-mobile-web-app-title"
+			content="Front-end test"
+		>
+
+		<meta
+			name="application-name"
+			content="Front-end test"
+		>
+
+		<meta
+			name="theme-color"
+			content="#39545f"
+		>
+
+		<meta
+			name="description"
+			content="Front-end test."
+			data-vue-meta="true"
+		>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="<%= BASE_URL %>img/icons/favicon-32x32.png"
+		>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="<%= BASE_URL %>img/icons/favicon-16x16.png"
+		>
+
+		<link
+			rel="manifest"
+			href="<%= BASE_URL %>manifest.json"
+		>
+
+		<meta
+			name="theme-color"
+			content="#39545f"
+		>
+
+		<meta
+			name="apple-mobile-web-app-capable"
+			content="no"
+		>
+
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="default"
+		>
+
+		<meta
+			name="apple-mobile-web-app-title"
+			content="Front-end test"
+		>
+
+		<link
+			rel="apple-touch-icon"
+			href="<%= BASE_URL %>img/icons/apple-touch-icon-152x152.png"
+		>
+
+		<link
+			rel="mask-icon"
+			href="<%= BASE_URL %>img/icons/safari-pinned-tab.svg"
+			color="#39545f"
+		>
+
+		<meta
+			name="msapplication-TileImage" content="<%= BASE_URL %>img/icons/msapplication-icon-144x144.png"
+		>
+
+		<meta
+			name="msapplication-TileColor"
+			content="#39545f"
+		>
+
+		<title>PUMA</title>
+
+		<style>
+			* {
+				max-width: 100%;
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-family: sans-serif;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				word-break: break-word;
+				-webkit-hyphens: auto;
+				-moz-hyphens: auto;
+				-ms-hyphens: auto;
+				hyphens: auto;
+			}
+
+			html,
+			body {
+				font-size: 100%;
+			}
+
+			body {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				min-height: 100vh;
+				line-height: 1.25;
+			}
+
+			#app {
+				width: 100%;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				min-height: 100vh;
+				background: #fafafa;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.spinner-block {
+				margin: auto;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				animation: fadein .25s;
+			}
+
+			.spinner-block svg {
+				display: block;
+				margin-right: 25px;
+			}
+
+			@-webkit-keyframes fadein {
+				from {
+					opacity: 0;
+				}
+
+				90% {
+					opacity: 0;
+				}
+
+				to {
+					opacity: 1;
+				}
+			}
+
+			@keyframes fadein {
+				from {
+					opacity: 0;
+				}
+
+				90% {
+					opacity: 0;
+				}
+
+				to {
+					opacity: 1;
+				}
+			}
+
+			.spinner {
+				-webkit-animation: rotator 1.4s linear infinite;
+				animation: rotator 1.4s linear infinite;
+			}
+
+			@-webkit-keyframes rotator {
+				0% {
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+
+				100% {
+					-webkit-transform: rotate(270deg);
+					transform: rotate(270deg);
+				}
+			}
+
+			@keyframes rotator {
+				0% {
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+
+				100% {
+					-webkit-transform: rotate(270deg);
+					transform: rotate(360deg);
+				}
+			}
+
+			/* Perfect animation */
+			.path {
+				stroke: #4285F4;
+				stroke-dasharray: 187;
+				stroke-dashoffset: 0;
+				-webkit-transform-origin: center;
+				-ms-transform-origin: center;
+				transform-origin: center;
+				-webkit-animation: dash 4s ease-in-out infinite,
+				colors 5.6s ease-in-out infinite;
+				animation: dash 4s ease-in-out infinite,
+				colors 5.6s ease-in-out infinite;
+			}
+
+			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+				/* Less good on IE */
+				.path {
+					stroke-dasharray: 100;
+				}
+			}
+
+			@-webkit-keyframes colors {
+				0% {
+					stroke: #4285F4;
+				}
+
+				25% {
+					stroke: #DE3E35;
+				}
+
+				50% {
+					stroke: #F7C223;
+				}
+
+				75% {
+					stroke: #1B9A59;
+				}
+
+				100% {
+					stroke: #4285F4;
+				}
+			}
+
+			@keyframes colors {
+				0% {
+					stroke: #4285F4;
+				}
+
+				25% {
+					stroke: #DE3E35;
+				}
+
+				50% {
+					stroke: #F7C223;
+				}
+
+				75% {
+					stroke: #1B9A59;
+				}
+
+				100% {
+					stroke: #4285F4;
+				}
+			}
+
+			@-webkit-keyframes dash {
+				0% {
+					stroke-dashoffset: 187;
+				}
+
+				50% {
+					stroke-dashoffset: 46.75;
+					-webkit-transform: rotate(135deg);
+					transform: rotate(135deg);
+				}
+
+				100% {
+					stroke-dashoffset: 187;
+					-webkit-transform: rotate(350deg);
+					transform: rotate(350deg);
+				}
+			}
+
+			@keyframes dash {
+				0% {
+					stroke-dashoffset: 187;
+				}
+
+				50% {
+					stroke-dashoffset: 46.75;
+					-webkit-transform: rotate(135deg);
+					transform: rotate(135deg);
+				}
+
+				100% {
+					stroke-dashoffset: 187;
+					-webkit-transform: rotate(350deg);
+					transform: rotate(350deg);
+				}
+			}
+		</style>
+
+		<noscript>
+			<style>
+				#app {
+					display: none;
+				}
+
+				noscript {
+					-webkit-box-flex: 1;
+					-ms-flex: 1;
+					flex: 1;
+					padding: 25px;
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+				}
+
+				main {
+					margin: auto;
+				}
+
+				h1 {
+					color: #0c4887;
+					margin-bottom: 15px;
+				}
+
+				p {
+					line-height: 1.5;
+				}
+			</style>
+		</noscript>
+	</head>
+
+	<body>
+		<noscript>
+			<main>
+				<h1>Activation de JavaScript</h1>
+
+				<p>Nous sommes désolés, mais il faut que JavaScript soit activé pour utiliser ce site.<br>
+				Nous travaillons sur une amélioration future où vous pourrez utiliser ce site sans avoir cette erreur.</p>
+			</main>
+		</noscript>
+
+		<div id="app">
+			<!-- Material Design loader -->
+			<div class="spinner-block">
+				<svg
+					class="spinner"
+					width="65px"
+					height="65px"
+					viewBox="0 0 66 66"
+					preserveAspectRatio="xMinYMin meet"
+				>
+					<circle
+						class="path"
+						fill="none"
+						stroke-width="6"
+						stroke-linecap="round"
+						cx="33"
+						cy="33"
+						r="30"
+					></circle>
+				</svg>
+
+				Chargement
+			</div>
+		</div>
+
+		<!-- Built files will be auto injected -->
+	</body>
+</html>

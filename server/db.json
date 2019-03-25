@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "name": "Baba au rhum",
+      "price": 3,
+      "number": 1,
+      "image": "baba-au-rhum.jpeg"
+    },
+    {
+      "id": 1,
+      "name": "Éclair au chocolat",
+      "price": 1.5,
+      "number": 1,
+      "image": "eclair-chocolat.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Fraisier",
+      "price": 4,
+      "number": 1,
+      "image": "fraisier.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Chouquettes",
+      "price": 3.5,
+      "number": 10,
+      "image": "chouquette.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Macarons",
+      "price": 5,
+      "number": 15,
+      "image": "macarons.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Millefeuille",
+      "price": 2.5,
+      "number": 1,
+      "image": "millefeuille.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Opéra",
+      "price": 3,
+      "number": 1,
+      "image": "opera.jpeg"
+    },
+    {
+      "id": 7,
+      "name": "Kouign Amann",
+      "price": 2,
+      "number": 1,
+      "image": "kouign-amann.jpeg"
+    },
+    {
+      "id": 8,
+      "name": "Tarte aux framboises",
+      "price": 3,
+      "number": 1,
+      "image": "tarte-aux-framboises.jpeg"
+    },
+    {
+      "id": 9,
+      "name": "Tarte citron meringuée",
+      "price": 3,
+      "number": 1,
+      "image": "tarte-citron-meringuee.jpeg"
+    },
+    {
+      "id": 10,
+      "name": "Tarte aux pommes",
+      "price": 3,
+      "number": 1,
+      "image": "tarte-aux-pommes.jpeg"
+    },
+    {
+      "id": 11,
+      "name": "Vacherin",
+      "price": 3,
+      "number": 1,
+      "image": "vacherin.jpeg"
+    }
+  ]
+}
