@@ -23,64 +23,27 @@
 				{{ product.price | euros }}
 			</span>
 
-			<template v-if="getProductQuantity(product.id)">
-				<button
-					class="round-btn outline"
-					:aria-label="$t('components.product.removeBtn', [product.name])"
-					@click="removeFromCart(product)"
-				>
-					<MinusIcon />
-				</button>
-
-				<span class="quantity">
-					<span class="sr-only">
-						{{ $t('components.product.quantity') }}
-					</span>
-
-					{{ getProductQuantity(product.id) }}
-				</span>
-			</template>
-
-			<button
-				class="round-btn"
-				:aria-label="$t('components.product.addBtn', [product.name])"
-				@click="addToCart(product)"
-			>
-				<PlusIcon />
-			</button>
+			<UpdateCartBtn
+				:product="product"
+			/>
 		</div>
 	</li>
 </template>
 
 <script lang="ts">
 	import Vue from 'vue';
-	import { mapActions, mapGetters, mapState } from 'vuex';
 
-	import MinusIcon from 'vue-material-design-icons/Minus.vue';
-	import PlusIcon from 'vue-material-design-icons/Plus.vue';
+	import UpdateCartBtn from '@/components/UpdateCartBtn.vue';
 
 	export default Vue.extend({
 		name: 'Poduct',
 		components: {
-			MinusIcon,
-			PlusIcon
+			UpdateCartBtn
 		},
 		props: {
 			product: {
 				type: [Object, Array],
 				required: true
-			}
-		},
-		computed: {
-			...mapState('cart', ['added'])
-		},
-		methods: {
-			...mapActions('cart', ['addToCart', 'removeFromCart']),
-			getProductQuantity(id: number) {
-				const product = this.added.find((p: any) => p.id === id);
-				const quantity = product ? product.quantity : 0;
-
-				return quantity;
 			}
 		}
 	});
@@ -126,38 +89,5 @@
 		justify-content: flex-end;
 
 		padding: 8px 16px;
-
-		.quantity {
-			margin: 0 10px;
-		}
-	}
-
-	.round-btn {
-		width: 35px;
-		height: 35px;
-
-		font-size: 1.25rem;
-
-		border-radius: 50%;
-		border: 1px solid transparent;
-
-		color: #fff;
-		background: #008393;
-
-		&:hover,
-		&:focus {
-			background: rgb(2, 152, 172);
-		}
-
-		&.outline {
-			background: transparent;
-			border-color: currentColor;
-			color: #008393;
-
-			&:hover,
-			&:focus {
-				background: rgba(2, 152, 172, .1);
-			}
-		}
 	}
 </style>
