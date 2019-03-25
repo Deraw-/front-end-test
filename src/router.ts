@@ -20,6 +20,11 @@ const router = new Router({
 			component: Home
 		},
 		{
+			path: '/cart',
+			name: 'cart',
+			component: () => import(/* webpackChunkName: "cart" */ './views/Cart.vue')
+		},
+		{
 			path: '*', // Everything that doesn't match something
 			name: 'notFound',
 			component: () => import(/* webpackChunkName: "not-found" */ './views/NotFound.vue')
