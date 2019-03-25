@@ -10,7 +10,7 @@
 
 		<RouterLink
 			:to="{ name: 'home' }"
-			class="btn"
+			class="btn primary"
 		>
 			Retour à la page d'accueil
 		</RouterLink>
@@ -46,20 +46,5 @@
 
 	p {
 		margin-top: 8px;
-	}
-
-	.btn {
-		display: inline-flex;
-
-		margin: 0 -16px;
-		margin-top: 24px;
-		text-decoration: none;
-
-		color: #008295;
-
-		&:hover,
-		&:focus {
-			background: rgba(74, 186, 208, .1);
-		}
 	}
 </style>

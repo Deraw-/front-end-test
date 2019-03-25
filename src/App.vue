@@ -78,6 +78,10 @@
 		font-size: 100%;
 	}
 
+	html {
+		overflow-y: scroll;
+	}
+
 	body {
 		min-height: 100vh;
 		line-height: 1.25;
@@ -137,6 +141,21 @@
 				0 1px 5px 0 rgba(0, 0, 0, .12);
 			}
 		}
+
+		&.primary {
+			display: inline-flex;
+
+			margin: 0 -16px;
+			margin-top: 24px;
+			text-decoration: none;
+
+			color: #008295;
+
+			&:hover,
+			&:focus {
+				background: rgba(74, 186, 208, .1);
+			}
+		}
 	}
 
 	.sr-only {
@@ -188,6 +207,15 @@
 
 		width: 1400px;
 		min-height: 500px;
+	}
+
+	.title {
+		font-size: 1.75rem;
+	}
+
+	.description {
+		margin-top: 15px;
+		font-size: 1.1rem;
 	}
 
 	@media only screen and (max-width: 600px) {

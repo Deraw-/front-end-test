@@ -39,15 +39,6 @@
 </script>
 
 <style lang="scss" scoped>
-	.title {
-		font-size: 1.75rem;
-	}
-
-	.description {
-		margin-top: 15px;
-		font-size: 1.1rem;
-	}
-
 	.products {
 		display: grid;
 		grid-gap: 32px;
