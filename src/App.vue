@@ -202,8 +202,10 @@
 	.page {
 		margin: 0 auto;
 		padding: 48px;
-		align-items: center;
+
+		display: flex;
 		flex-direction: column;
+		flex: 1 0 auto;
 
 		width: 1400px;
 		min-height: 500px;
@@ -218,7 +220,19 @@
 		font-size: 1.1rem;
 	}
 
+	.grid-list {
+		display: grid;
+		grid-gap: 32px;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-auto-rows: minmax(250px, auto);
+		margin-top: 50px;
+	}
+
 	@media only screen and (max-width: 600px) {
+		.grid-list {
+			margin-top: 25px;
+		}
+
 		.page {
 			padding: 15px !important;
 		}

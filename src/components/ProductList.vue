@@ -9,7 +9,7 @@
 			v-html="$t('components.productList.description')"
 		/>
 
-		<ul class="products">
+		<ul class="grid-list">
 			<Product
 				v-for="product in products"
 				:key="product.id"
@@ -37,19 +37,3 @@
 		}
 	});
 </script>
-
-<style lang="scss" scoped>
-	.products {
-		display: grid;
-		grid-gap: 32px;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		grid-auto-rows: minmax(250px, auto);
-		margin-top: 50px;
-	}
-
-	@media only screen and (max-width: 600px) {
-		.products {
-			margin-top: 25px;
-		}
-	}
-</style>

@@ -1,8 +1,8 @@
 import { Module, ActionTree, MutationTree, GetterTree } from 'vuex';
-import { RootState, Product } from '../types';
+import { RootState, ProductType } from '../types';
 
 interface CartState {
-	added: Product[];
+	added: ProductType[];
 	lastCheckout: null | string;
 }
 
@@ -12,10 +12,10 @@ const state: CartState = {
 };
 
 const actions: ActionTree<CartState, RootState> = {
-	addToCart({ commit, dispatch }, product: Product) {
+	addToCart({ commit, dispatch }, product: ProductType) {
 		commit('ADD_TO_CART', product.id);
 	},
-	removeFromCart({ commit, dispatch }, product: Product) {
+	removeFromCart({ commit, dispatch }, product: ProductType) {
 		commit('REMOVE_FROM_CART', product.id);
 	}
 };
@@ -23,7 +23,7 @@ const actions: ActionTree<CartState, RootState> = {
 const mutations: MutationTree<CartState> = {
 	ADD_TO_CART(state, productId: number) {
 		state.lastCheckout = null;
-		const record = state.added.find((p: Product) => p.id === productId);
+		const record = state.added.find((p: ProductType) => p.id === productId);
 
 		// If the product is not in the cart, add it
 		if (!record) {
@@ -37,7 +37,7 @@ const mutations: MutationTree<CartState> = {
 		}
 	},
 	REMOVE_FROM_CART(state, productId: number) {
-		const record = state.added.find((p: Product) => p.id === productId);
+		const record = state.added.find((p: ProductType) => p.id === productId);
 
 		if (record) {
 			record.quantity--;
@@ -53,7 +53,7 @@ const mutations: MutationTree<CartState> = {
 const getters: GetterTree<CartState, RootState> = {
 	cartProducts(state, getters, rootState: any) {
 		return state.added.map(({ id, quantity }) => {
-			const product = rootState.products.all.find((p: Product) => p.id === id);
+			const product = rootState.products.all.find((p: ProductType) => p.id === id);
 
 			return {
 				name: product.name,

@@ -1,10 +1,10 @@
 import { Module, ActionTree, MutationTree, GetterTree } from 'vuex';
-import { RootState, Product } from '../types';
+import { RootState, ProductType } from '../types';
 
 import shop from '@/services/shop';
 
 interface ProductsState {
-	all: Product[];
+	all: ProductType[];
 }
 
 const state: ProductsState = {
@@ -32,7 +32,7 @@ const mutations: MutationTree<ProductsState> = {
 
 const getters: GetterTree<ProductsState, RootState> = {
 	findProduct: (state) => (id: number) => {
-		return state.all.find((p: Product) => p.id === id) || {};
+		return state.all.find((p: ProductType) => p.id === id) || {};
 	}
 };
 

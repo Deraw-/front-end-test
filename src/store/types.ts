@@ -1,12 +1,12 @@
 // tslint:disable-next-line:no-empty-interface
 export interface RootState {}
 
-export interface Product extends Object {
+export interface ProductType extends Object {
 	id: number;
 	quantity: number;
 }
 
-export interface CartProduct extends Product {
+export interface CartProduct extends ProductType {
 	name: string;
 	price: number;
 	image: string;
@@ -17,4 +17,6 @@ export interface CartProduct extends Product {
 // tslint:disable-next-line: no-empty-interface
 export default interface VuexBindings {
 	cartProducts: CartProduct[];
+	all: ProductType[];
+	added: CartProduct[];
 }
