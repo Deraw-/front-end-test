@@ -34,6 +34,14 @@ yarn serve
 
 This will launch a server on `localhost`, and if possible on your current network.
 
+### Development API
+
+To start the develoment API using [json-server](https://github.com/typicode/json-server), run:
+
+```bash
+yarn serve:back
+```
+
 ### Lints and fixes files
 ```
 yarn run lint
