@@ -1,9 +1,9 @@
 <template>
 	<div class="home-ctn">
 		<section class="banner">
-			<h1 class="main-title">
-				Pâtisserie
-			</h1>
+			<h2 class="main-title">
+				{{ $t('views.home.title') }}
+			</h2>
 
 			<img
 				src="/img/background.jpg"
@@ -19,6 +19,7 @@
 
 <script lang="ts">
 	import Vue from 'vue';
+	import { MetaInfo } from 'vue-meta';
 	import { mapState, mapActions } from 'vuex';
 
 	import ProductList from '@/components/ProductList.vue';
@@ -36,6 +37,17 @@
 		},
 		methods: {
 			...mapActions('products', ['setAllProducts'])
+		},
+		metaInfo(): MetaInfo {
+			return {
+				title: this.$t('views.home.meta.title') as string,
+				meta: [
+					{
+						name: 'description',
+						content: this.$t('views.home.meta.description') as string
+					}
+				]
+			};
 		}
 	});
 </script>

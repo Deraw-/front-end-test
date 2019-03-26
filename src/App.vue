@@ -6,6 +6,11 @@
 		<Header />
 
 		<main role="main">
+			<!-- Main title -->
+			<h1 class="sr-only">
+				Pâtisserie shop
+			</h1>
+
 			<!-- Load the component defined in the router for the current route -->
 			<transition
 				name="fade"
@@ -149,7 +154,7 @@
 			margin-top: 24px;
 			text-decoration: none;
 
-			color: #008295;
+			color: #007c8e;
 
 			&:hover,
 			&:focus {
@@ -204,8 +209,8 @@
 		padding: 48px;
 
 		display: flex;
-		flex-direction: column;
 		flex: 1 0 auto;
+		flex-direction: column;
 
 		width: 1400px;
 		min-height: 500px;

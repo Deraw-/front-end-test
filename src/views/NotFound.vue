@@ -1,18 +1,18 @@
 <template>
 	<section class="page not-found">
 		<h2 class="code">
-			404
+			{{ $t('views.notFound.code') }}
 		</h2>
 
-		<h3>Page non trouvée</h3>
+		<h3>{{ $t('views.notFound.title') }}</h3>
 
-		<p>Il semblerait qu'il y ait eu une erreur !</p>
+		<p>{{ $t('views.notFound.description') }}</p>
 
 		<RouterLink
 			:to="{ name: 'home' }"
 			class="btn primary"
 		>
-			Retour à la page d'accueil
+			{{ $t('views.notFound.homeLink') }}
 		</RouterLink>
 	</section>
 </template>

@@ -1,20 +1,20 @@
 <template>
 	<section class="page">
 		<h2 class="title">
-			Your Cart
+			{{ $t('views.cart.title') }}
 		</h2>
 
 		<!-- Empty cart -->
 		<template v-if="!cartProducts.length">
 			<p class="description">
-				Your cart is empty!
+				{{ $t('views.cart.empty.title') }}
 			</p>
 
 			<RouterLink
 				class="btn primary"
 				:to="{ name: 'home' }"
 			>
-				Browse products
+				{{ $t('views.cart.empty.homeLink') }}
 			</RouterLink>
 		</template>
 
@@ -22,12 +22,12 @@
 			<CartList :products="cartProducts" />
 
 			<div class="total">
-				Total ({{ cartProducts.length }} items): <span class="price">{{ total | euros }}</span>
+				{{ $tc('views.cart.total', cartProducts.length) }} <span class="price">{{ total | euros }}</span>
 			</div>
 
 			<div class="suggestion">
 				<h2 class="title">
-					You might also like…
+					{{ $t('views.cart.suggestion') }}
 				</h2>
 
 				<ul
@@ -47,6 +47,7 @@
 
 <script lang="ts">
 	import Vue, { VueConstructor } from 'vue';
+	import { MetaInfo } from 'vue-meta';
 	import { mapGetters, mapState } from 'vuex';
 	import VuexBindings, { CartProduct, ProductType } from '@/store/types';
 
@@ -79,6 +80,17 @@
 				// Only 4 suggestions
 				return suggestion.slice(0, 4);
 			}
+		},
+		metaInfo(): MetaInfo {
+			return {
+				title: this.$t('views.cart.meta.title') as string,
+				meta: [
+					{
+						name: 'description',
+						content: this.$t('views.cart.meta.description') as string
+					}
+				]
+			};
 		}
 	});
 </script>

@@ -18,7 +18,7 @@
 						class="btn primary"
 						@click="deleteFromCart(product)"
 					>
-						Delete
+						{{ $t('components.cartList.deleteBtn') }}
 					</button>
 				</div>
 			</div>
@@ -107,7 +107,7 @@
 
 	.price {
 		font-weight: 700;
-		color: #008393;
+		color: #007c8b;
 
 		text-align: right;
 	}
