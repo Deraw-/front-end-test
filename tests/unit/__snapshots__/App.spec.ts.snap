@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.vue renders correctly 1`] = `
+<div class="main-ctn">
+  <header-stub></header-stub>
+  <main role="main">
+    <h1 class="sr-only">
+      Pâtisserie shop
+    </h1>
+    <routerview-stub name="fade" mode="out-in"></routerview-stub>
+  </main>
+  <footer-stub></footer-stub>
+</div>
+`;

@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartList.vue renders correctly 1`] = `
+<ul class="cart-list">
+  <li>
+    <div class="product-infos"><img src="/api/img//img.jpg" alt="" class="image">
+      <div class="name">
+        name
+
+        <button class="btn primary">
+          components.cartList.deleteBtn
+        </button></div>
+    </div>
+    <updatecartbtn-stub product="[object Object]" class="cart-btn"></updatecartbtn-stub>
+    <div class="price">
+      15,00 €
+    </div>
+  </li>
+  <li>
+    <div class="product-infos"><img src="/api/img//img.jpg" alt="" class="image">
+      <div class="name">
+        name
+
+        <button class="btn primary">
+          components.cartList.deleteBtn
+        </button></div>
+    </div>
+    <updatecartbtn-stub product="[object Object]" class="cart-btn"></updatecartbtn-stub>
+    <div class="price">
+      15,00 €
+    </div>
+  </li>
+  <li>
+    <div class="product-infos"><img src="/api/img//img.jpg" alt="" class="image">
+      <div class="name">
+        name
+
+        <button class="btn primary">
+          components.cartList.deleteBtn
+        </button></div>
+    </div>
+    <updatecartbtn-stub product="[object Object]" class="cart-btn"></updatecartbtn-stub>
+    <div class="price">
+      15,00 €
+    </div>
+  </li>
+  <li>
+    <div class="product-infos"><img src="/api/img//img.jpg" alt="" class="image">
+      <div class="name">
+        name
+
+        <button class="btn primary">
+          components.cartList.deleteBtn
+        </button></div>
+    </div>
+    <updatecartbtn-stub product="[object Object]" class="cart-btn"></updatecartbtn-stub>
+    <div class="price">
+      15,00 €
+    </div>
+  </li>
+  <li>
+    <div class="product-infos"><img src="/api/img//img.jpg" alt="" class="image">
+      <div class="name">
+        name
+
+        <button class="btn primary">
+          components.cartList.deleteBtn
+        </button></div>
+    </div>
+    <updatecartbtn-stub product="[object Object]" class="cart-btn"></updatecartbtn-stub>
+    <div class="price">
+      15,00 €
+    </div>
+  </li>
+  <li>
+    <div class="product-infos"><img src="/api/img//img.jpg" alt="" class="image">
+      <div class="name">
+        name
+
+        <button class="btn primary">
+          components.cartList.deleteBtn
+        </button></div>
+    </div>
+    <updatecartbtn-stub product="[object Object]" class="cart-btn"></updatecartbtn-stub>
+    <div class="price">
+      15,00 €
+    </div>
+  </li>
+  <li>
+    <div class="product-infos"><img src="/api/img//img.jpg" alt="" class="image">
+      <div class="name">
+        name
+
+        <button class="btn primary">
+          components.cartList.deleteBtn
+        </button></div>
+    </div>
+    <updatecartbtn-stub product="[object Object]" class="cart-btn"></updatecartbtn-stub>
+    <div class="price">
+      15,00 €
+    </div>
+  </li>
+  <li>
+    <div class="product-infos"><img src="/api/img//img.jpg" alt="" class="image">
+      <div class="name">
+        name
+
+        <button class="btn primary">
+          components.cartList.deleteBtn
+        </button></div>
+    </div>
+    <updatecartbtn-stub product="[object Object]" class="cart-btn"></updatecartbtn-stub>
+    <div class="price">
+      15,00 €
+    </div>
+  </li>
+</ul>
+`;

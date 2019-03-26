@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product.vue renders correctly 1`] = `
+<li class="product"><img src="/api/img//img.jpg" alt="" class="image">
+  <div class="product-desc">
+    <h3 class="name">
+      name
+    </h3>
+    <p class="number">
+      components.product.number
+    </p>
+  </div>
+  <div class="actions"><span class="price">
+			15,00 €
+		</span>
+    <updatecartbtn-stub product="[object Object]"></updatecartbtn-stub>
+  </div>
+</li>
+`;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductList.vue renders correctly 1`] = `
+<div>
+  <h2 class="title">
+    components.productList.title
+  </h2>
+  <p class="description">components.productList.description</p>
+  <ul class="grid-list">
+    <product-stub product="[object Object]"></product-stub>
+    <product-stub product="[object Object]"></product-stub>
+    <product-stub product="[object Object]"></product-stub>
+    <product-stub product="[object Object]"></product-stub>
+    <product-stub product="[object Object]"></product-stub>
+    <product-stub product="[object Object]"></product-stub>
+    <product-stub product="[object Object]"></product-stub>
+    <product-stub product="[object Object]"></product-stub>
+  </ul>
+</div>
+`;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UpdateCartBtn.vue renders correctly 1`] = `
+<div>
+  <!----> <button aria-label="components.product.addBtn" class="round-btn">
+    <plusicon-stub title="Plus icon" fillcolor="currentColor" size="24"></plusicon-stub>
+  </button></div>
+`;

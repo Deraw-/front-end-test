@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart.vue renders correctly 1`] = `
+<section class="page">
+  <h2 class="title">
+    views.cart.title
+  </h2>
+  <p class="description">
+    views.cart.empty.title
+  </p>
+  <routerlink-stub to="[object Object]" tag="a" event="click" class="btn primary">
+    views.cart.empty.homeLink
+  </routerlink-stub>
+</section>
+`;

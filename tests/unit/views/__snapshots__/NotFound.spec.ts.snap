@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound.vue renders correctly 1`] = `
+<section class="page">
+  <h2 class="code">
+    views.notFound.code
+  </h2>
+  <h3>views.notFound.title</h3>
+  <p>views.notFound.description</p>
+  <routerlink-stub to="[object Object]" tag="a" event="click" class="btn primary">
+    views.notFound.homeLink
+  </routerlink-stub>
+</section>
+`;

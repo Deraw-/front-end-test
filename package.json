@@ -102,15 +102,18 @@
 			"!**/node_modules/**",
 			"!**/*.d.ts",
 			"!**/router.ts",
-			"!**/config/index.ts",
 			"!**/main.ts",
 			"!**/plugins/**",
 			"!**/store/**",
 			"!**/i18n.ts",
 			"!**/services/**",
-			"!**/tests/**"
+			"!**/tests/**",
+			"!**/translations/**"
 		],
-		"testURL": "http://localhost/"
+		"testURL": "http://localhost/",
+		"transformIgnorePatterns": [
+			"./node_modules/(?!vue-material-design-icons)"
+		]
 	},
 	"gitHooks": {
 		"pre-commit": "lint-staged"

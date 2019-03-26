@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home.vue renders correctly 1`] = `
+<div class="home-ctn">
+  <section class="banner">
+    <h2 class="main-title">
+      views.home.title
+    </h2> <img src="/img/background.jpg" alt="">
+  </section>
+  <section class="page">
+    <productlist-stub products=""></productlist-stub>
+  </section>
+</div>
+`;
