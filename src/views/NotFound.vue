@@ -1,5 +1,5 @@
 <template>
-	<section class="page not-found">
+	<section class="page">
 		<h2 class="code">
 			{{ $t('views.notFound.code') }}
 		</h2>
@@ -38,6 +38,10 @@
 </script>
 
 <style lang="scss" scoped>
+	.page {
+		align-items: flex-start;
+	}
+
 	.code {
 		color: #00a3ba;
 		font-size: 6rem;
