@@ -30,16 +30,19 @@
 					{{ $t('views.cart.suggestion') }}
 				</h2>
 
-				<ul
+				<transition-group
 					v-if="suggestion"
-					class="grid-list"
+					tag="ul"
+					name="list-animation"
+					class="suggestion-list"
 				>
 					<Product
 						v-for="product in suggestion"
 						:key="product.id"
 						:product="product"
+						class="list-animation-item"
 					/>
-				</ul>
+				</transition-group>
 			</div>
 		</template>
 	</section>
@@ -96,6 +99,23 @@
 </script>
 
 <style lang="scss" scoped>
+	// Transition
+	.list-animation-item {
+		transition: all .5s;
+		position: relative;
+		display: inline-block;
+	}
+
+	.list-animation-enter,
+	.list-animation-leave-to {
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	.list-animation-leave-active {
+		position: absolute;
+	}
+
 	.total {
 		margin-top: 15px;
 		margin-right: 20px;
@@ -110,9 +130,19 @@
 
 	.suggestion {
 		margin-top: auto;
+		display: block;
 	}
 
-	.grid-list {
+	.suggestion-list {
+		display: flex;
+		flex-wrap: wrap;
+
+		margin: -16px;
 		margin-top: 25px;
+
+		.product {
+			width: 250px;
+			margin: 16px;
+		}
 	}
 </style>
