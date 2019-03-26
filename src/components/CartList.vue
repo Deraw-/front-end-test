@@ -16,7 +16,7 @@
 
 					<button
 						class="btn primary"
-						@click="removeFromCart(product)"
+						@click="deleteFromCart(product)"
 					>
 						Delete
 					</button>
@@ -53,7 +53,7 @@
 			}
 		},
 		methods: {
-			...mapActions('cart', ['removeFromCart'])
+			...mapActions('cart', ['deleteFromCart'])
 		}
 	});
 </script>

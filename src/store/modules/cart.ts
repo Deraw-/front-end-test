@@ -12,11 +12,14 @@ const state: CartState = {
 };
 
 const actions: ActionTree<CartState, RootState> = {
-	addToCart({ commit, dispatch }, product: ProductType) {
+	addToCart({ commit }, product: ProductType) {
 		commit('ADD_TO_CART', product.id);
 	},
-	removeFromCart({ commit, dispatch }, product: ProductType) {
+	removeFromCart({ commit }, product: ProductType) {
 		commit('REMOVE_FROM_CART', product.id);
+	},
+	deleteFromCart({ commit }, product: ProductType) {
+		commit('DELETE_FROM_CART', product.id);
 	}
 };
 
@@ -46,6 +49,14 @@ const mutations: MutationTree<CartState> = {
 				const index = state.added.indexOf(record);
 				state.added.splice(index, 1);
 			}
+		}
+	},
+	DELETE_FROM_CART(state, productId: number) {
+		const record = state.added.find((p: ProductType) => p.id === productId);
+
+		if (record) {
+			const index = state.added.indexOf(record);
+			state.added.splice(index, 1);
 		}
 	}
 };

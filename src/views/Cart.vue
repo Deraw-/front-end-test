@@ -99,4 +99,8 @@
 	.suggestion {
 		margin-top: auto;
 	}
+
+	.grid-list {
+		margin-top: 25px;
+	}
 </style>
