@@ -28,4 +28,11 @@ describe('UpdateCartBtn.vue', () => {
 	it('renders correctly', () => {
 		expect(wrapper).toMatchSnapshot();
 	});
+
+	it('retrieves the product quantity', () => {
+		const button = wrapper.find('button');
+		button.trigger('click');
+
+		expect(wrapper.vm.getProductQuantity()).toBe(0);
+	});
 });

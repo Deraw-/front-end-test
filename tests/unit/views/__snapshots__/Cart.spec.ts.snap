@@ -5,6 +5,22 @@ exports[`Cart.vue renders correctly 1`] = `
   <h2 class="title">
     views.cart.title
   </h2>
+  <cartlist-stub products="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"></cartlist-stub>
+  <div class="total">
+    views.cart.total <span class="price">240,00 €</span></div>
+  <div class="suggestion">
+    <h2 class="title">
+      views.cart.suggestion
+    </h2> <span tag="ul" name="list-animation" class="suggestion-list"><product-stub product="[object Object]" class="list-animation-item"></product-stub><product-stub product="[object Object]" class="list-animation-item"></product-stub><product-stub product="[object Object]" class="list-animation-item"></product-stub><product-stub product="[object Object]" class="list-animation-item"></product-stub></span>
+  </div>
+</section>
+`;
+
+exports[`Cart.vue renders correctly without data 1`] = `
+<section class="page">
+  <h2 class="title">
+    views.cart.title
+  </h2>
   <p class="description">
     views.cart.empty.title
   </p>
