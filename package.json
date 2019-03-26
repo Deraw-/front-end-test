@@ -80,7 +80,8 @@
 		"moduleNameMapper": {
 			"^@/(.*)$": "<rootDir>/src/$1",
 			"^tests-unit/(.*)$": "<rootDir>/tests/unit/$1",
-			"^vue$": "<rootDir>/node_modules/vue/dist/vue.common.js"
+			"^vue$": "<rootDir>/node_modules/vue/dist/vue.common.js",
+			"^icons/(.*)$": "<rootDir>/node_modules/vue-material-design-icons/$1"
 		},
 		"snapshotSerializers": [
 			"<rootDir>/node_modules/jest-serializer-vue"
@@ -112,7 +113,7 @@
 		],
 		"testURL": "http://localhost/",
 		"transformIgnorePatterns": [
-			"./node_modules/(?!vue-material-design-icons)"
+			"<rootDir>/node_modules/(?!vue-material-design-icons)"
 		]
 	},
 	"gitHooks": {

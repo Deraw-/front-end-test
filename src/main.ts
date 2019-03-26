@@ -5,7 +5,7 @@ import router from './router';
 import store from './store/';
 import i18n from './i18n';
 
-import 'vue-material-design-icons/styles.css';
+import 'icons/styles.css';
 
 Vue.config.productionTip = false;
 

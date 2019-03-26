@@ -20,7 +20,7 @@
 	import Vue from 'vue';
 
 	import CartLink from '@/components/CartLink.vue';
-	import HomeIcon from 'vue-material-design-icons/Home.vue';
+	import HomeIcon from 'icons/Home.vue';
 
 	export default Vue.extend({
 		name: 'Header',

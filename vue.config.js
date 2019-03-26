@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
 	runtimeCompiler: false,
 	productionSourceMap: true,
@@ -9,6 +11,14 @@ module.exports = {
 				maxSize: 244000,
 				chunks: 'all'
 			}
+		},
+		resolve: {
+			alias : {
+				'icons': path.resolve(__dirname, 'node_modules/vue-material-design-icons')
+			},
+			extensions: [
+				'.vue'
+			]
 		}
 	},
 	transpileDependencies: ['vuex-persist'],

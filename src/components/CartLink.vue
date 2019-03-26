@@ -16,7 +16,7 @@
 	import Vue from 'vue';
 	import { mapGetters } from 'vuex';
 
-	import CartIcon from 'vue-material-design-icons/Cart.vue';
+	import CartIcon from 'icons/Cart.vue';
 
 	export default Vue.extend({
 		name: 'CartLink',

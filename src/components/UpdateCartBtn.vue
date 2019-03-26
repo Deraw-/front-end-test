@@ -32,8 +32,8 @@
 	import Vue from 'vue';
 	import { mapActions, mapGetters, mapState } from 'vuex';
 
-	import MinusIcon from 'vue-material-design-icons/Minus.vue';
-	import PlusIcon from 'vue-material-design-icons/Plus.vue';
+	import MinusIcon from 'icons/Minus.vue';
+	import PlusIcon from 'icons/Plus.vue';
 
 	export default Vue.extend({
 		name: 'UpdateCartBtn',
