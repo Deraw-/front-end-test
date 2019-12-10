@@ -1,17 +1,10 @@
+// Vue CLI configuration
+// see https://cli.vuejs.org/guide/ for help
 const path = require('path');
 
 module.exports = {
-	runtimeCompiler: false,
-	productionSourceMap: true,
-	parallel: true,
 	configureWebpack: {
-		optimization: {
-			minimize: true,
-			splitChunks: {
-				maxSize: 244000,
-				chunks: 'all'
-			}
-		},
+		// Production optimization
 		resolve: {
 			alias : {
 				'icons': path.resolve(__dirname, 'node_modules/vue-material-design-icons')
@@ -21,10 +14,12 @@ module.exports = {
 			]
 		}
 	},
+	// Transpile ES6 inside dependencies
 	transpileDependencies: ['vuex-persist'],
 	devServer: {
 		proxy: {
-			'/api': {
+			// Redirect api requests in development mode
+			'^/api': {
 				target: 'http://localhost:3000/',
 				changeOrigin: true
 			}
